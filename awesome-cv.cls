@@ -121,9 +121,9 @@
 % Gray-scale colors
 \definecolor{white}{HTML}{FFFFFF}
 \definecolor{black}{HTML}{000000}
-\definecolor{darkgray}{HTML}{222222}
-\definecolor{gray}{HTML}{5D5D5D}
-\definecolor{lightgray}{HTML}{999999}
+\definecolor{darkgray}{HTML}{1c1c1c}
+\definecolor{gray}{HTML}{222222}
+\definecolor{lightgray}{HTML}{5D5D5D}
 % Basic colors
 \definecolor{green}{HTML}{C2E15F}
 \definecolor{orange}{HTML}{FDA333}
