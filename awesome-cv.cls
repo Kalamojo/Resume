@@ -332,8 +332,8 @@
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{3mm}
-\newcommand{\acvSectionContentTopSkip}{2.5mm} %changed from 1.5
+\newcommand{\acvSectionTopSkip}{1mm} %changed from 3
+\newcommand{\acvSectionContentTopSkip}{.5mm} %changed from 1.5
 
 
 %-------------------------------------------------------------------------------
@@ -374,7 +374,7 @@
   \newlength{\headertextwidth}
   \newlength{\headerphotowidth}
   \ifthenelse{\isundefined{\@photo}}{
-    \setlength{\headertextwidth}{\textwidth}
+    \setlength{\headertextwidth}{0.994\textwidth}
     \setlength{\headerphotowidth}{0cm}
   }{%
     \setlength{\headertextwidth}{0.76\textwidth}
@@ -585,29 +585,12 @@
 
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-2.0mm}
-  \begin{center}
-    \setlength\tabcolsep{1ex}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
-    \end{tabular*}
-  \end{center}
-}
-% Define a line of cv information(skill)
-% Usage: \cvskill{<type>}{<skillset>}
-% \newcommand*{\cvskill}[2]{%
-%   \skilltypestyle{#1} & \skillsetstyle{#2} \\
-% }
-
-% Define an environment for cvaward
-\newenvironment{cvawards}{%
     \vspace{-2.0mm}
     \begin{flushleft}%
 }{%
     \end{flushleft}%
 }
-\newcommand*{\cvaward}[2]{%
+\newcommand*{\cvskill}[2]{%
   \skilltypestyle{#1} \space \skillsetstyle{#2} \\
 }
 
