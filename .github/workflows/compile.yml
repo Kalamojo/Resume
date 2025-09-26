@@ -44,7 +44,7 @@ jobs:
       - name: Generate Resume Thumbnail
         run: |
           cd build/
-          pdftopm -png Kolade_Alabi.pdf Kolade_Alabi
+          pdftoppm -png Kolade_Alabi.pdf Kolade_Alabi
           mv Kolade_Alabi-1.png Kolade_Alabi.png
       
       - name: Deploy
