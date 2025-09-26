@@ -16,7 +16,7 @@ permissions:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  compile-and-deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -35,11 +35,6 @@ jobs:
           file Kolade_Alabi.pdf | grep -q ' PDF '
           mkdir build
           mv Kolade_Alabi.pdf build/
-  deploy:
-    needs: build
-    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
-    runs-on: ubuntu-latest
-    steps:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
