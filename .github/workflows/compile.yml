@@ -25,16 +25,28 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Set up Git repository 
         uses: actions/checkout@v4
+      
+      - name: Install Required Packages
+        run: sudo apt install -y poppler-utils
+      
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v4
         with:
           root_file: Kolade_Alabi.tex
           latexmk_use_xelatex: true
+      
       - name: Move PDF to build folder
         run: |
           file Kolade_Alabi.pdf | grep -q ' PDF '
           mkdir build
           mv Kolade_Alabi.pdf build/
+
+      - name: Generate Resume Thumbnail
+        run: |
+          cd build/
+          pdftopm -png Kolade_Alabi.pdf Kolade_Alabi
+          mv Kolade_Alabi-1.png Kolade_Alabi.png
+      
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
