@@ -29,12 +29,14 @@ jobs:
         uses: xu-cheng/latex-action@v4
         with:
           root_file: Kolade_Alabi.tex
+          latexmk_use_xelatex: true
       - name: Move PDF to build folder
         run: |
           file Kolade_Alabi.pdf | grep -q ' PDF '
           mkdir build
           mv Kolade_Alabi.pdf build/
   deploy:
+    needs: build
     concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
     steps:
