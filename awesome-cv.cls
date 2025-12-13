@@ -542,6 +542,19 @@
   \end{tabular*}%
   \vspace{0.6mm}
 }
+
+% Define an entry of cv project
+% Usage: \cvproject{<Title>}{<Description>}
+\newcommand*{\cvproject}[2]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth}}
+    \entrytitlestylealt{#1} \\
+    \descriptionstyle{#2}
+  \end{tabular*}%
+}
+
 % Define an entry without description of cv information
 % Usage: \cvempty{<position>}{<title>}{<location>}{<date>}
 \newcommand*{\cvempty}[4]{%
