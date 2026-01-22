@@ -330,9 +330,10 @@
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 \newcommand{\acvHeaderAfterSocialSkip}{6mm}
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
+\newcommand{\acvHeaderBottomSkip}{3mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{1mm} %changed from 3
+\newcommand{\acvSectionTopSkip}{-1mm} %changed from 3
 \newcommand{\acvSectionContentTopSkip}{.5mm} %changed from 1.5
 
 
@@ -478,6 +479,7 @@
   \begin{minipage}[c]{\headerphotowidth}%
     \ifthenelse{\equal{\@photoalign}{right}}{\raggedleft\drawphoto}{}
   \end{minipage}
+  \vspace{\acvHeaderBottomSkip}
 }
 
 % Define a footer for CV
@@ -546,7 +548,7 @@
 % Define an entry of cv project
 % Usage: \cvproject{<Title>}{<Description>}
 \newcommand*{\cvproject}[2]{%
-  \vspace{-2.0mm}
+  \vspace{-3.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth}}
@@ -602,6 +604,7 @@
     \begin{flushleft}%
 }{%
     \end{flushleft}%
+    \vspace{2.0mm}
 }
 \newcommand*{\cvskill}[2]{%
   \skilltypestyle{#1} \space \skillsetstyle{#2} \\
