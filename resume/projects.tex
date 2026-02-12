@@ -2,12 +2,13 @@
 
 \begin{cventries}
   \cvproject
-    {\textbf{\href{https://github.com/ByItsCover}{\underline{By Its Cover}}} | PyTorch, OpenAI CLIP, FastAPI, Python, PgVector, GraphQL, Microsoft SemanticKernel, .NET 9, AWS RDS}
+    {\textbf{\href{https://github.com/ByItsCover}{\underline{By Its Cover}}} | PyTorch, ONNX, OpenAI CLIP, FastAPI, PgVector, GraphQL, .NET 9, AWS (Batch, Lambda, RDS)}
     {
       \begin{cvitems}
-        \item {Developing a Collaborative Filtering model, based on CLIP embeddings, for recommending book covers to users based on the covers of books along with the cover ratings from similar users}
-    \item {Implemented a GoodReads cover scraper, along with integrations with HardCover API for Isbn details, to populate a PgVector database of book cover CLIP embeddings, enabling semantic search by text or other covers}
-        \item{Deploying cover vector database to AWS RDS, while with hosting CLIP model and .NET cover rating API on AWS ECS}
+        \item {Architecting a multi-vector embedding-based search engine to support for vague natural-text searches for books by way of a Late-Interaction approach, enabling fine-grained spatial queries for both cover images and book metadata}
+        \item {Developing a CLIP embedding-based hybrid Collaborative Filtering model for recommending book covers to users, taking advantage of features from both user relationships (by ratings) as well as aesthetic qualities from cover images}
+        \item {Implemented an automated database ingestion pipeline, fit with book detail sourcing from both GoodReads and the HardCover API, to populate an AWS RDS PostgreSQL database of book cover CLIP embeddings and metadata, enabling semantic search and recommendation capabilities}
+        \item{Deployed a serverless CLIP embedding endpoint to AWS Lambda, utilizing ONNX to quantize and optimize the CLIP model, reducing cold-start overhead and inference times by more than 80\%}
       \end{cvitems}
     }
 
