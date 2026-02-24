@@ -102,7 +102,7 @@
 %-------------------------------------------------------------------------------
 %% Page Layout
 % Configure page margins with geometry
-\geometry{left=2.0cm, top=1.5cm, right=2.0cm, bottom=2.0cm, footskip=.5cm, includehead}
+\geometry{left=2.0cm, top=1.5cm, right=2.0cm, bottom=1.0cm, footskip=.25cm, includehead}
 
 %% Header & Footer
 % Set offset to each header and footer
@@ -333,8 +333,8 @@
 \newcommand{\acvHeaderBottomSkip}{3mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{-1mm} %changed from 3
-\newcommand{\acvSectionContentTopSkip}{.5mm} %changed from 1.5
+\newcommand{\acvSectionTopSkip}{-1.25mm} %changed from 3
+\newcommand{\acvSectionContentTopSkip}{.25mm} %changed from 1.5
 
 
 %-------------------------------------------------------------------------------
@@ -529,7 +529,7 @@
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{%
-  \vspace{-2.0mm}
+  \vspace{-2.75mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
