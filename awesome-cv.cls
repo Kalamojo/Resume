@@ -537,10 +537,14 @@
       {\entrytitlestylealt{#2} \\
         \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}}
       {\ifempty{#2#3}
-          {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-          {\entrytitlestylealt{#2} & \entrylocationstyle{#3} \\
-            \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-        \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}}
+          {\entrypositionstyle{#1} & \entrydatestyle{#4} \\
+            \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}}
+          {\ifempty{#5}
+              {\entrytitlestylealt{#2} & \entrylocationstyle{#3} \\
+                \entrypositionstyle{#1} & \entrydatestyle{#4}}
+              {\entrytitlestylealt{#2} & \entrylocationstyle{#3} \\
+                \entrypositionstyle{#1} & \entrydatestyle{#4} \\
+                \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}}}}
   \end{tabular*}%
   \vspace{0.6mm}
 }
