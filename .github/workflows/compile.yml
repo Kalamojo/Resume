@@ -34,6 +34,7 @@ jobs:
         with:
           root_file: Kolade_Alabi.tex
           latexmk_use_xelatex: true
+          texlive_version: 2024
       
       - name: Move PDF to build folder
         run: |
