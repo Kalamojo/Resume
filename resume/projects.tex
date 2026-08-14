@@ -1,23 +1,15 @@
 \cvsection{Projects}
 
 \begin{cventries}
-  \cvproject
-    {\textbf{\href{https://github.com/ByItsCover}{\underline{By Its Cover}}} | PyTorch, ONNX, OpenAI CLIP, LanceDB, TypeScript, React, .NET 9, Docker, AWS (Lambda, S3, SQS, Batch)}
-    {
-      \begin{cvitems}
-        \item {Architecting a multi-vector embedding-based search engine to support for vague natural-text searches for books by way of a late-Interaction approach, enabling fine-grained spatial queries for both cover images and book metadata}
-        \item {Developing a CLIP embedding-based hybrid Collaborative Filtering model for recommending book covers to users, taking advantage of features from both user relationships (by ratings) as well as aesthetic qualities from cover images}
-        % \item {Implemented an automated database ingestion pipeline, fit with book detail sourcing from both GoodReads and the HardCover API, to populate a LanceDB vector database of book cover CLIP embeddings and metadata, enabling semantic search and recommendation capabilities}
-        \item{Deployed a serverless CLIP embedding endpoint to AWS Lambda, utilizing ONNX to quantize and optimize the CLIP model, reducing cold-start overhead and inference times by more than 80\%}
-      \end{cvitems}
-    }
 
   \cvproject
-    {\textbf{\href{https://devpost.com/software/organize-stuff}{\underline{Organic Clusters}}} | Vowpal Wabbit, OpenAI CLIP, ONNX, PyTorch, FastAPI, TypeScript, React, Vercel, Cloudflare Workers}
+    {\textbf{\href{https://by-its-cover.com}{\underline{By Its Cover}}} | PyTorch, ONNX, CLIP, LanceDB, Python, TypeScript, React, .NET 10, Docker, AWS (Lambda, S3, SQS, Batch)}
     {
       \begin{cvitems}
-        \item {Designed a robust, semi-automatic content organization tool that utilizes Contextual Multi-Armed Bandits to create groupings for websites and images while also responding to and learning from user suggestions}
-        \item {Built Organic Clusters end-to-end within the 36 hours alloted by the TreeHacks 2026 hackathon, complete with quantized text and image embedding models, a Vite/React frontend, and a Cloudflare worker for the clustering bandit}
+        \item {Architected a multi-vector embedding-based search engine to support for vague natural-text searches for books by way of a late-Interaction approach, enabling fine-grained spatial queries for both cover images and book metadata}
+        \item {Developed a CLIP embedding-based hybrid Collaborative Filtering model for recommending book covers to users, taking advantage of features from both user relationships (by ratings) as well as aesthetic qualities from cover images}
+        \item {Implemented an automated database ingestion pipeline, fit with book detail sourcing from both GoodReads and the HardCover API, to populate a LanceDB vector database of both book cover CLIP and two-tower network embeddings, enabling semantic search and recommendation capabilities}
+        \item{Deployed a serverless book cover embedding endpoint to AWS Lambda, utilizing ONNX to optimize and serve the CLIP model asynchronously, reducing cold-start overhead and inference times by more than 90\%}
       \end{cvitems}
     }
 

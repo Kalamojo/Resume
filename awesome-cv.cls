@@ -333,8 +333,9 @@
 \newcommand{\acvHeaderBottomSkip}{3mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{-1.25mm} %changed from 3
-\newcommand{\acvSectionContentTopSkip}{.25mm} %changed from 1.5
+\newcommand{\acvSectionTopSkip}{-0.75mm} %changed from 1.25
+\newcommand{\acvSectionContentTopSkip}{.75mm} %changed from 0.25
+\newcommand{\acvEntryMarginTopSkip}{-2.25mm} %changed from -3.0
 
 
 %-------------------------------------------------------------------------------
@@ -504,7 +505,7 @@
 % Usage: \cvsubsection{<subsection-title>}
 \newcommand{\cvsubsection}[1]{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-3mm}
+  \vspace{\acvEntryMarginTopSkip}
   \subsectionstyle{#1}
   \phantomsection
 }
@@ -512,7 +513,7 @@
 % Define a paragraph for CV
 \newenvironment{cvparagraph}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-2mm}
+  \vspace{\acvEntryMarginTopSkip}
   \paragraphstyle
 }{%
   \par
@@ -529,7 +530,7 @@
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{%
-  \vspace{-2.75mm}
+  \vspace{\acvEntryMarginTopSkip}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
@@ -552,7 +553,7 @@
 % Define an entry of cv project
 % Usage: \cvproject{<Title>}{<Description>}
 \newcommand*{\cvproject}[2]{%
-  \vspace{-3.0mm}
+  \vspace{\acvEntryMarginTopSkip}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth}}
@@ -564,7 +565,7 @@
 % Define an entry without description of cv information
 % Usage: \cvempty{<position>}{<title>}{<location>}{<date>}
 \newcommand*{\cvempty}[4]{%
-  \vspace{-3.0mm}
+  \vspace{\acvEntryMarginTopSkip}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
@@ -587,7 +588,7 @@
 % Define an environment for cvhonor
 \newenvironment{cvhonors}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-2mm}
+  \vspace{\acvEntryMarginTopSkip}
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
@@ -604,7 +605,7 @@
 
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
-    \vspace{-2.0mm}
+    \vspace{\acvEntryMarginTopSkip}
     \begin{flushleft}%
 }{%
     \end{flushleft}%
