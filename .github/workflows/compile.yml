@@ -6,9 +6,9 @@ name: Compile and Deploy LaTeX resume
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-    branches: [ "master" ]
+    branches: [ "jake" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "jake" ]
 
 permissions:
   contents: write
@@ -32,21 +32,21 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: Kolade_Alabi.tex
+          root_file: Kolade_J_Alabi.tex
           latexmk_use_xelatex: true
           texlive_version: 2024
       
       - name: Move PDF to build folder
         run: |
-          file Kolade_Alabi.pdf | grep -q ' PDF '
+          file Kolade_J_Alabi.pdf | grep -q ' PDF '
           mkdir build
-          mv Kolade_Alabi.pdf build/
+          mv Kolade_J_Alabi.pdf build/
 
       - name: Generate Resume Thumbnail
         run: |
           cd build/
-          pdftoppm -png Kolade_Alabi.pdf Kolade_Alabi
-          mv Kolade_Alabi-1.png Kolade_Alabi.png
+          pdftoppm -png Kolade_J_Alabi.pdf Kolade_J_Alabi
+          mv Kolade_J_Alabi-1.png Kolade_J_Alabi.png
       
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
