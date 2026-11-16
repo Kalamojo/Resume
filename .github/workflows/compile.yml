@@ -33,7 +33,6 @@ jobs:
         uses: xu-cheng/latex-action@v4
         with:
           root_file: Kolade_J_Alabi.tex
-          latexmk_use_xelatex: true
           texlive_version: 2024
       
       - name: Move PDF to build folder
